@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as *;
+
+body {
+  font-family: $body-font-family;
+  font-size: $font-size-base;
+  color: $body-text-color;
+  line-height: $line-height-body;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+p,
+li,
+a,
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  line-height: $line-height-heading;
+  letter-spacing: -0.02em;
+  color: $secondary-color;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,412 @@
+@use "sass:color";
+@use "../../abstracts/variables" as *;
+
+.subscriptions {
+  display: flex;
+  min-height: clamp(32rem, 35.6vw, 46.75rem);
+  align-items: center;
+  padding-block: 3rem;
+  background-color: $secondary-color;
+  background-image: url("/img/home/subscriptions/subscriptions-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.subscriptions__container {
+  position: relative;
+  width: 100%;
+  padding-inline: clamp(1.5rem, 7.8vw, 10.5rem);
+}
+
+.subscriptions__layout {
+  align-items: flex-start;
+}
+
+.subscriptions__intro-col {
+  margin-bottom: 0;
+}
+
+.subscriptions__header {
+  max-width: 37rem;
+}
+
+.subscriptions__eyebrow {
+  margin: 0 0 0.65rem;
+  color: #a9d99b;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.subscriptions__title {
+  margin: 0;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 2.9vw, 4rem);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.subscriptions__title span {
+  display: block;
+}
+
+.subscriptions__intro {
+  max-width: 34rem;
+  margin: 1rem 0 0;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 1.04rem;
+  line-height: 1.6;
+}
+
+.subscriptions__checklist {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.45;
+  list-style: none;
+}
+
+.subscriptions__checklist li {
+  position: relative;
+  min-height: 1.85rem;
+  padding: 0.2rem 0 0.1rem 2.65rem;
+}
+
+.subscriptions__checklist li::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: grid;
+  width: 1.95rem;
+  aspect-ratio: 1;
+  place-items: center;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #ffffff;
+  color: $primary-color;
+  content: "✓";
+  font-weight: 700;
+}
+
+.subscriptions__grid {
+  align-items: stretch;
+}
+
+.subscriptions__item {
+  position: relative;
+  display: flex;
+}
+
+.subscriptions__card {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: clamp(25rem, 23.9vw, 31.5rem);
+  padding: 1.8rem 1.4rem 1.25rem;
+  border: 1px solid rgba(37, 51, 0, 0.08);
+  border-radius: 1rem;
+  background-color: #fffefa;
+  box-shadow: 0 0.55rem 1.2rem rgba(0, 0, 0, 0.09);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.subscriptions__card:hover {
+  border-color: rgba($primary-color, 0.32);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.subscriptions__item--featured {
+  z-index: 1;
+}
+
+.subscriptions__item--featured .subscriptions__card {
+  min-height: calc(clamp(25rem, 23.9vw, 31.5rem) + 0.5rem);
+  border: 2px solid #f2c62e;
+  background-color: #f7f9ed;
+}
+
+.subscriptions__badge {
+  position: absolute;
+  top: 0.35rem;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.2rem;
+  padding: 0.45rem 1.25rem;
+  border-radius: 999px;
+  background-color: #f5c52d;
+  color: #172500;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.subscriptions__card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-height: 4.4rem;
+}
+
+.subscriptions__plan-name {
+  margin: 0;
+  color: $secondary-color;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.3rem, 1.9vw, 2rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.subscriptions__quantity {
+  margin: 0;
+  color: $primary-color;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.subscriptions__price-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 0.12rem;
+  min-width: 0;
+  margin-top: 0.35rem;
+  padding-block: 0.75rem 1.1rem;
+  border-bottom: 1px solid rgba($secondary-color, 0.12);
+  color: $secondary-color;
+  white-space: nowrap;
+}
+
+.subscriptions__currency {
+  font-size: clamp(1.1rem, 1.5vw, 1.7rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.subscriptions__price {
+  font-size: clamp(2.2rem, 3.2vw, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.subscriptions__period {
+  margin-left: 0.22rem;
+  color: $muted-text-color;
+  font-size: clamp(0.84rem, 1.1vw, 1.06rem);
+  line-height: 1;
+}
+
+.subscriptions__features {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1.15rem 0 auto;
+  padding: 0;
+  color: #565b51;
+  font-size: 0.96rem;
+  line-height: 1.5;
+  list-style: none;
+}
+
+.subscriptions__features li {
+  position: relative;
+  padding-left: 2.15rem;
+}
+
+.subscriptions__features li::before {
+  position: absolute;
+  top: 0.05rem;
+  left: 0;
+  display: grid;
+  width: 1.35rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  background-color: rgba($primary-color, 0.7);
+  color: #ffffff;
+  content: "✓";
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.subscriptions__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+  min-height: 3rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba($primary-color, 0.75);
+  border-radius: 999px;
+  background-color: transparent;
+  color: $primary-color;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 220ms ease, border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+}
+
+.subscriptions__cta:hover,
+.subscriptions__cta:focus-visible {
+  background-color: rgba($primary-color, 0.12);
+  border-color: rgba($primary-color, 0.28);
+  box-shadow: 0 0.5rem 1rem rgba($primary-color, 0.15);
+  transform: translateY(-1px);
+}
+
+.subscriptions__cta:focus-visible {
+  outline: 2px solid rgba($primary-color, 0.72);
+  outline-offset: 2px;
+}
+
+.subscriptions__cta--primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  color: #ffffff;
+}
+
+.subscriptions__cta--primary:hover,
+.subscriptions__cta--primary:focus-visible {
+  background-color: color.scale($primary-color, $lightness: -8%);
+  border-color: color.scale($primary-color, $lightness: -8%);
+  box-shadow: 0 0.6rem 1.1rem rgba($primary-color, 0.22);
+}
+
+.subscriptions [data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 480ms ease var(--reveal-delay, 0ms), transform 480ms ease var(--reveal-delay, 0ms);
+}
+
+.subscriptions [data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subscriptions__item:nth-child(2) {
+  --reveal-delay: 120ms;
+}
+
+.subscriptions__item:nth-child(3) {
+  --reveal-delay: 200ms;
+}
+
+@media (max-width: 1199.98px) {
+  .subscriptions {
+    display: block;
+    min-height: 0;
+    padding-block: 3.5rem;
+  }
+
+  .subscriptions__container {
+    padding-inline: clamp(1.5rem, 5vw, 3.5rem);
+  }
+
+  .subscriptions__intro-col {
+    margin-bottom: 2rem;
+  }
+
+  .subscriptions__header {
+    max-width: 42rem;
+  }
+
+  .subscriptions__cards-col {
+    width: 100%;
+  }
+
+  .subscriptions__card,
+  .subscriptions__item--featured .subscriptions__card {
+    min-height: 26rem;
+  }
+
+  .subscriptions__plan-name {
+    font-size: clamp(1.2rem, 2.1vw, 1.65rem);
+  }
+
+  .subscriptions__price {
+    font-size: clamp(1.75rem, 3.2vw, 2.6rem);
+  }
+
+  .subscriptions__period {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .subscriptions__header {
+    max-width: 100%;
+    margin: 0 0 1.5rem;
+  }
+
+  .subscriptions__checklist {
+    text-align: left;
+  }
+
+  .subscriptions__intro {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .subscriptions {
+    padding-block: 3rem;
+  }
+
+  .subscriptions__title {
+    font-size: clamp(2.15rem, 8vw, 2.75rem);
+  }
+
+  .subscriptions__card,
+  .subscriptions__item--featured .subscriptions__card {
+    min-height: 25rem;
+    padding: 1.6rem 1.25rem 1.15rem;
+  }
+
+  .subscriptions__card {
+    padding: 1.6rem 1.25rem 1.15rem;
+  }
+
+  .subscriptions__plan-name {
+    font-size: 1.4rem;
+  }
+
+  .subscriptions__price {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+  }
+
+  .subscriptions__period {
+    font-size: 0.95rem;
+  }
+
+  .subscriptions__features {
+    font-size: 0.95rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .subscriptions [data-reveal],
+  .subscriptions__card,
+  .subscriptions__cta {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

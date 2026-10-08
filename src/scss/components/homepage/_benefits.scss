@@ -1,0 +1,147 @@
+@use "../../abstracts/variables" as *;
+
+.benefits {
+  padding-block: 0.35rem;
+  background-color: $surface-color;
+}
+
+.benefits__list {
+  align-items: stretch;
+  margin-bottom: 0;
+}
+
+.benefits__column {
+  display: flex;
+}
+
+.benefits__item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 6.1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.65rem 0.45rem;
+  color: $secondary-color;
+  text-align: center;
+  animation: benefits-enter 420ms ease-out both;
+  transition: transform 220ms ease, color 220ms ease;
+
+  &:hover {
+    color: $primary-color;
+    transform: translateY(-2px);
+  }
+
+  &:hover .benefits__icon {
+    transform: scale(1.04);
+  }
+}
+
+.benefits__column:nth-child(2) .benefits__item {
+  animation-delay: 45ms;
+}
+
+.benefits__column:nth-child(3) .benefits__item {
+  animation-delay: 90ms;
+}
+
+.benefits__column:nth-child(4) .benefits__item {
+  animation-delay: 135ms;
+}
+
+.benefits__column:nth-child(5) .benefits__item {
+  animation-delay: 180ms;
+}
+
+.benefits__column + .benefits__column .benefits__item::before {
+  position: absolute;
+  top: 14%;
+  bottom: 14%;
+  left: 0;
+  border-left: 1px solid $border-color;
+  content: "";
+}
+
+.benefits__icon {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+  object-fit: contain;
+  transition: transform 220ms ease;
+}
+
+.benefits__copy {
+  display: grid;
+  gap: 0.12rem;
+  margin: 0;
+  font-size: 0.83rem;
+  line-height: 1.35;
+
+  strong {
+    font-weight: 650;
+  }
+
+  span {
+    font-weight: 400;
+  }
+}
+
+@keyframes benefits-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .benefits__column + .benefits__column .benefits__item::before {
+    content: none;
+  }
+
+  .benefits__item {
+    min-height: 6.3rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .benefits {
+    padding-block: 0.2rem;
+  }
+
+  .benefits__item {
+    min-height: 6.4rem;
+    gap: 0.35rem;
+    padding-inline: 0.3rem;
+  }
+
+  .benefits__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    flex-basis: 1.8rem;
+  }
+
+  .benefits__copy {
+    font-size: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .benefits__item {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    transition-duration: 0.01ms;
+  }
+
+  .benefits__icon {
+    transition-duration: 0.01ms;
+  }
+}

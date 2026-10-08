@@ -1,0 +1,384 @@
+@use "../../abstracts/variables" as *;
+
+.hero {
+  position: relative;
+  min-height: 34rem;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: $background-color;
+}
+
+.hero__visual {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: hero-image-enter 800ms ease-out both;
+  }
+}
+
+.hero__container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: inherit;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hero__slide,
+.hero__slide > .row {
+  width: 100%;
+}
+
+.hero__content {
+  max-width: 39rem;
+}
+
+.hero__eyebrow {
+  margin: 0 0 0.65rem;
+  color: $primary-color;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  animation: hero-content-enter 480ms 80ms ease-out both;
+}
+
+.hero__title {
+  max-width: 39rem;
+  margin: 0;
+  color: $secondary-color;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.1rem, 4vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  animation: hero-content-enter 520ms 150ms ease-out both;
+
+  span {
+    display: block;
+  }
+}
+
+.hero__description {
+  max-width: 32rem;
+  margin: 0.9rem 0 1.25rem;
+  color: #343b32;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  animation: hero-content-enter 520ms 220ms ease-out both;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  animation: hero-content-enter 520ms 290ms ease-out both;
+}
+
+.hero__button {
+  display: inline-flex;
+  min-height: 2.85rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid $primary-color;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 650;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition: color 220ms ease, background-color 220ms ease, border-color 220ms ease, transform 220ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    outline: 3px solid rgba($primary-color, 0.32);
+    outline-offset: 3px;
+  }
+}
+
+.hero__button--primary {
+  background-color: $primary-color;
+  color: #fff;
+
+  &:hover {
+    border-color: $secondary-color;
+    background-color: $secondary-color;
+    color: #fff;
+  }
+}
+
+.hero__button--secondary {
+  background-color: rgba($surface-color, 0.9);
+  color: $secondary-color;
+
+  &:hover {
+    background-color: $secondary-color;
+    color: #fff;
+  }
+}
+
+.hero__trust-row {
+  display: flex;
+  align-items: center;
+  margin-top: 1.35rem;
+  animation: hero-content-enter 520ms 370ms ease-out both;
+}
+
+.hero__trust-item {
+  margin: 0;
+  padding: 0.1rem 1rem 0.1rem 0;
+  color: #343b32;
+  font-size: 0.8rem;
+  line-height: 1.45;
+
+  p {
+    margin: 0;
+  }
+
+  & + & {
+    padding-left: 1rem;
+    border-left: 1px solid rgba($secondary-color, 0.25);
+  }
+
+  strong {
+    display: block;
+    color: $secondary-color;
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+}
+
+.hero__callout {
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  left: 68%;
+  width: 15%;
+  max-width: 12rem;
+  height: auto;
+  object-fit: contain;
+  animation: hero-callout-enter 580ms 520ms ease-out both;
+}
+
+@keyframes hero-image-enter {
+  from {
+    opacity: 0.7;
+    transform: scale(1.015);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes hero-content-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-callout-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .hero {
+    min-height: 32rem;
+  }
+
+  .hero__title {
+    font-size: 3.5rem;
+  }
+
+  .hero__description {
+    max-width: 29rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero {
+    min-height: 0;
+  }
+
+  .hero__visual {
+    top: auto;
+    height: 17rem;
+
+    img {
+      object-position: 78% center;
+    }
+  }
+
+  .hero__container {
+    min-height: 0;
+    padding-top: 2.2rem;
+    padding-bottom: 19rem;
+  }
+
+  .hero__title,
+  .hero__content {
+    max-width: 34rem;
+  }
+
+  .hero__title {
+    font-size: 3.25rem;
+  }
+
+  .hero__callout {
+    top: auto;
+    right: 25%;
+    bottom: 1.25rem;
+    left: auto;
+    width: 6.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero__container {
+    padding-top: 2rem;
+  }
+
+  .hero__content,
+  .hero__title {
+    max-width: 100%;
+  }
+
+  .hero__title {
+    font-size: 3rem;
+    line-height: 1.04;
+  }
+
+  .hero__description {
+    max-width: 35rem;
+  }
+
+  .hero__callout {
+    top: auto;
+    right: 25%;
+    bottom: 1.25rem;
+    left: auto;
+    width: 6.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero__container {
+    padding-top: 1.8rem;
+    padding-right: 1.25rem;
+    padding-bottom: 18.5rem;
+    padding-left: 1.25rem;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 0.5rem;
+    font-size: 0.72rem;
+  }
+
+  .hero__title {
+    font-size: 2.55rem;
+  }
+
+  .hero__description {
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .hero__actions {
+    gap: 0.55rem;
+  }
+
+  .hero__button {
+    min-height: 2.7rem;
+    padding-inline: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .hero__trust-row {
+    margin-top: 1rem;
+  }
+
+  .hero__trust-item {
+    padding-right: 0.65rem;
+    font-size: 0.66rem;
+  }
+
+  .hero__trust-item + .hero__trust-item {
+    padding-left: 0.65rem;
+  }
+
+  .hero__visual {
+    height: 16rem;
+  }
+
+  .hero__callout {
+    right: 24%;
+    bottom: 1rem;
+    width: 5.7rem;
+  }
+}
+
+@media (max-width: 359.98px) {
+  .hero__title {
+    font-size: 2.3rem;
+  }
+
+  .hero__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero__button {
+    width: 100%;
+  }
+
+  .hero__callout {
+    right: 18%;
+    width: 5.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__visual img,
+  .hero__eyebrow,
+  .hero__title,
+  .hero__description,
+  .hero__actions,
+  .hero__trust-row,
+  .hero__callout {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero__button {
+    transition-duration: 0.01ms;
+  }
+}

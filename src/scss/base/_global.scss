@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as *;
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+body {
+  background-color: $background-color;
+  font-size: $font-size-body-mobile;
+  line-height: $line-height-body;
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: $font-size-body-desktop;
+  }
+}
