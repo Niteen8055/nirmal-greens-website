@@ -9,11 +9,17 @@ use InvalidArgumentException;
 final class Variety
 {
     private string $name;
+
     private ?string $latin;
+
     private int $growDays;
+
     private ?int $yieldMinG;
+
     private ?int $yieldMaxG;
+
     private ?string $tag;
+
     private bool $isActive;
 
     /** @var array<string, mixed> */
