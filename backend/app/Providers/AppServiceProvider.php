@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Src\Catalog\Domain\Plan\PlanRepository;
 use Src\Catalog\Domain\Variety\VarietyRepository;
+use Src\Catalog\Infrastructure\Persistence\Eloquent\EloquentPlanRepository;
 use Src\Catalog\Infrastructure\Persistence\Eloquent\EloquentVarietyRepository;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,6 +15,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        $this->app->bind(
+            PlanRepository::class,
+            EloquentPlanRepository::class,
+        );
+
         $this->app->bind(
             VarietyRepository::class,
             EloquentVarietyRepository::class,
