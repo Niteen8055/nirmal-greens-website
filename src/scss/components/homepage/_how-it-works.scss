@@ -52,11 +52,11 @@
 
 .how-it-works__title-stroke {
   position: absolute;
-  bottom: 0.58em;
-  left: 0%;
+  top: -0.16em;
+  left: -2%;
   z-index: 0;
-  width: 98%;
-  height: 0.38em;
+  width: 104%;
+  height: 1.02em;
   overflow: visible;
   pointer-events: none;
 }
@@ -256,6 +256,11 @@
 
   .how-it-works__title {
     font-size: 2.15rem;
+  }
+
+  .how-it-works__title-stroke {
+    top: 0.16em;
+    height: 0.85em;
   }
 
   .how-it-works__intro {

@@ -6,8 +6,9 @@
             <div class="how-it-works__heading-group">
                 <p class="how-it-works__eyebrow">From Growing Greens to Your Plate</p>
                 <span class="how-it-works__title-wrap">
-                    <svg class="how-it-works__title-stroke" viewBox="0 0 420 30" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-                        <path d="M6 21C84 9 168 5 246 8c52 2 104 7 168 5" fill="none" stroke="#8cbf3f" stroke-width="13" stroke-linecap="round"/>
+                    <svg class="how-it-works__title-stroke" viewBox="0 0 420 80" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                        <path d="M18 20C80 4 140 10 190 34c50 22 110 32 170 34 25 1 40-2 54-8" fill="none" stroke="#c2df80" stroke-width="12" stroke-linecap="round"/>
+                        <path d="M28 28C82 12 138 18 182 40" fill="none" stroke="#dcefb0" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
                     </svg>
                     <h2 class="how-it-works__title" id="how-it-works-title">How It Works?</h2>
                 </span>
