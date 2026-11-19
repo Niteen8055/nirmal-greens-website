@@ -1,4 +1,4 @@
-<section class="microgreens<?= is_file(__DIR__ . '/../img/home/microgreens/microgreens-bg.webp') ? ' microgreens--bg' : '' ?>" id="microgreens" aria-labelledby="microgreens-title">
+<section class="microgreens<?= is_file(__DIR__ . '/../img/home/microgreens/nirmal-greens-microgreens-background.webp') ? ' microgreens--bg' : '' ?>" id="microgreens" aria-labelledby="microgreens-title">
     <div class="container microgreens__container">
         <header class="microgreens__header" data-reveal>
             <p class="microgreens__badge">
