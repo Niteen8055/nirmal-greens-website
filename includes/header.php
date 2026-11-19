@@ -45,7 +45,7 @@
                 </a>
 
                 <a class="site-header__shop-button" href="#subscriptions">
-                    Shop Now <span aria-hidden="true">&#8594;</span>
+                    Shop Now<span aria-hidden="true">&#8594;</span>
                 </a>
             </div>
         </div>

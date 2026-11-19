@@ -1,9 +1,9 @@
 @use "abstracts/variables" as *;
+@use "base/fonts";
 @use "base/reset";
 @use "base/typography";
 @use "base/global";
 
-@use "components/buttons";
 @use "components/cards";
 @use "components/preloader";
 @use "components/scroll-progress";
@@ -18,3 +18,6 @@
 @use "layout/header";
 @use "layout/footer";
 @use "layout/container";
+
+// Loaded last so pressed states win over component hover transforms.
+@use "components/buttons";

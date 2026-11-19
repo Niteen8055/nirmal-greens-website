@@ -14,7 +14,7 @@
         <ol class="row list-unstyled how-it-works__steps">
             <li class="col-6 col-lg-3 how-it-works__step" data-reveal>
                 <div class="how-it-works__image-wrap">
-                    <img class="how-it-works__image" src="/img/home/how-it-works/step-1.png" alt="" aria-hidden="true" loading="eager" decoding="sync">
+                    <span class="how-it-works__image-clip"><img class="how-it-works__image" src="/img/home/how-it-works/step-1.png" alt="" aria-hidden="true" loading="eager" decoding="sync"></span>
                     <span class="how-it-works__number" aria-hidden="true">01</span>
                 </div>
                 <img class="how-it-works__connector" src="/img/home/how-it-works/arrow.png" alt="" aria-hidden="true" loading="eager" decoding="sync">
@@ -23,7 +23,7 @@
             </li>
             <li class="col-6 col-lg-3 how-it-works__step" data-reveal>
                 <div class="how-it-works__image-wrap">
-                    <img class="how-it-works__image" src="/img/home/how-it-works/step-2.png" alt="" aria-hidden="true" loading="eager" decoding="sync">
+                    <span class="how-it-works__image-clip"><img class="how-it-works__image" src="/img/home/how-it-works/step-2.png" alt="" aria-hidden="true" loading="eager" decoding="sync"></span>
                     <span class="how-it-works__number" aria-hidden="true">02</span>
                 </div>
                 <img class="how-it-works__connector" src="/img/home/how-it-works/arrow.png" alt="" aria-hidden="true" loading="eager" decoding="sync">
@@ -32,7 +32,7 @@
             </li>
             <li class="col-6 col-lg-3 how-it-works__step" data-reveal>
                 <div class="how-it-works__image-wrap">
-                    <img class="how-it-works__image" src="/img/home/how-it-works/step-3.png" alt="" aria-hidden="true" loading="eager" decoding="sync">
+                    <span class="how-it-works__image-clip"><img class="how-it-works__image" src="/img/home/how-it-works/step-3.png" alt="" aria-hidden="true" loading="eager" decoding="sync"></span>
                     <span class="how-it-works__number" aria-hidden="true">03</span>
                 </div>
                 <img class="how-it-works__connector" src="/img/home/how-it-works/arrow.png" alt="" aria-hidden="true" loading="eager" decoding="sync">
@@ -41,7 +41,7 @@
             </li>
             <li class="col-6 col-lg-3 how-it-works__step" data-reveal>
                 <div class="how-it-works__image-wrap">
-                    <img class="how-it-works__image" src="/img/home/how-it-works/step-4.png" alt="" aria-hidden="true" loading="eager" decoding="sync">
+                    <span class="how-it-works__image-clip"><img class="how-it-works__image" src="/img/home/how-it-works/step-4.png" alt="" aria-hidden="true" loading="eager" decoding="sync"></span>
                     <span class="how-it-works__number" aria-hidden="true">04</span>
                 </div>
                 <h3 class="how-it-works__step-title">You Enjoy</h3>

@@ -106,7 +106,7 @@ $hero-cream: #fbf3e7;
     max-width: 100%;
     margin: 0;
     color: $secondary-color;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: $heading-font-family;
     font-size: clamp(2.7rem, 3.4vw, 3.75rem);
     font-weight: 700;
     line-height: 1.04;
@@ -159,6 +159,7 @@ $hero-cream: #fbf3e7;
     min-height: 2.85rem;
     align-items: center;
     justify-content: center;
+    gap: 0.45rem;
     padding: 0.7rem 1.4rem;
     border: 1px solid $primary-color;
     border-radius: 999px;
@@ -701,14 +702,15 @@ $hero-cream: #fbf3e7;
     }
 
     .hero__visual {
-        height: 100%;
+        top: 18rem;
+        height: calc(100% - 18rem);
 
         img {
             object-position: 50% 30%;
         }
 
         &::after {
-            background: linear-gradient(180deg, rgba($hero-cream, 0.99) 0%, rgba($hero-cream, 0.96) 38%, rgba($hero-cream, 0.62) 58%, rgba($hero-cream, 0) 82%);
+            background: linear-gradient(180deg, rgba($hero-cream, 0.99) 0%, rgba($hero-cream, 0.9) 22%, rgba($hero-cream, 0.45) 48%, rgba($hero-cream, 0) 78%);
         }
     }
 

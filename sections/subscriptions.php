@@ -1,5 +1,5 @@
 <section class="subscriptions" id="subscriptions" aria-labelledby="subscriptions-title">
-    <div class="container-fluid subscriptions__container">
+    <div class="container subscriptions__container">
         <div class="row subscriptions__layout">
             <div class="col-12 col-xl-4 subscriptions__intro-col" data-reveal>
                 <header class="subscriptions__header">

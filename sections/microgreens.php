@@ -7,7 +7,7 @@
         </header>
 
         <div class="row g-4 g-lg-5 microgreens__grid">
-            <article class="col-12 col-sm-6 col-lg-4 microgreens__item" data-reveal>
+            <article class="col-6 col-lg-4 microgreens__item" data-reveal>
                 <div class="microgreens__card">
                     <div class="microgreens__media">
                         <img class="microgreens__image" src="/img/home/microgreens/broccoli.png" alt="Broccoli microgreens" loading="eager" decoding="sync">
@@ -20,7 +20,7 @@
                 </div>
             </article>
 
-            <article class="col-12 col-sm-6 col-lg-4 microgreens__item" data-reveal>
+            <article class="col-6 col-lg-4 microgreens__item" data-reveal>
                 <div class="microgreens__card">
                     <div class="microgreens__media">
                         <img class="microgreens__image" src="/img/home/microgreens/pink-radish.png" alt="Pink Radish microgreens" loading="eager" decoding="sync">
@@ -33,7 +33,7 @@
                 </div>
             </article>
 
-            <article class="col-12 col-sm-6 col-lg-4 microgreens__item" data-reveal>
+            <article class="col-6 col-lg-4 microgreens__item" data-reveal>
                 <div class="microgreens__card">
                     <div class="microgreens__media">
                         <img class="microgreens__image" src="/img/home/microgreens/mustard.png" alt="Mustard microgreens" loading="eager" decoding="sync">
@@ -46,7 +46,7 @@
                 </div>
             </article>
 
-            <article class="col-12 col-sm-6 col-lg-4 microgreens__item" data-reveal>
+            <article class="col-6 col-lg-4 microgreens__item" data-reveal>
                 <div class="microgreens__card">
                     <div class="microgreens__media">
                         <img class="microgreens__image" src="/img/home/microgreens/fenugreek.png" alt="Fenugreek microgreens" loading="eager" decoding="sync">
@@ -59,7 +59,7 @@
                 </div>
             </article>
 
-            <article class="col-12 col-sm-6 col-lg-4 microgreens__item" data-reveal>
+            <article class="col-6 col-lg-4 microgreens__item" data-reveal>
                 <div class="microgreens__card">
                     <div class="microgreens__media">
                         <img class="microgreens__image" src="/img/home/microgreens/sunflower.png" alt="Sunflower microgreens" loading="eager" decoding="sync">
@@ -72,7 +72,7 @@
                 </div>
             </article>
 
-            <article class="col-12 col-sm-6 col-lg-4 microgreens__item" data-reveal>
+            <article class="col-6 col-lg-4 microgreens__item" data-reveal>
                 <div class="microgreens__card">
                     <div class="microgreens__media">
                         <img class="microgreens__image" src="/img/home/microgreens/spinach.png" alt="Spinach microgreens" loading="eager" decoding="sync">

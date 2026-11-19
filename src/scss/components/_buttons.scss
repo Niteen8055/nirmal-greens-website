@@ -1,1 +1,12 @@
-// Button styles can be added when the component is defined.
+// Shared pressed feedback for interactive controls.
+.hero__button:active,
+.site-header__shop-button:active,
+.site-header__icon-button:active,
+.subscriptions__cta:active,
+.final-cta__button:active,
+.microgreens__cta:active,
+.recipes__all:active,
+.recipes__arrow:active,
+.site-footer__subscribe:active {
+  transform: translateY(0) scale(0.98);
+}

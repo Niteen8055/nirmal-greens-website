@@ -56,7 +56,7 @@
 
                         <div class="hero__actions">
                             <a class="hero__button hero__button--primary" href="#subscriptions">
-                                Subscribe Now
+                                Subscribe Now<span aria-hidden="true">&#8594;</span>
                             </a>
                             <a class="hero__button hero__button--secondary" href="#microgreens">
                                 Explore Microgreens
