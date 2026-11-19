@@ -1,11 +1,11 @@
 @use "../../abstracts/variables" as *;
 
 $micro-sand: #f7f1e4;
-$micro-cream: #fbf7ee;
+$micro-cream: #fef8ef;
 $micro-green: #1d5327;
 $micro-green-soft: #e8f1d5;
 $micro-green-line: #b9cc93;
-$micro-wave: #dcebc5;
+$micro-wave: #e3ebb7;
 $micro-line: #e6dfcf;
 
 .microgreens {
@@ -120,28 +120,28 @@ $micro-line: #e6dfcf;
   display: flex;
   flex: 1 1 auto;
   align-items: center;
-  gap: 0.9rem;
+  gap: 1.25rem;
   overflow: hidden;
-  padding: 1.1rem 1.3rem 1.2rem;
+  padding: 0.75rem 1.3rem;
 }
 
 .microgreens__icon {
   position: relative;
   z-index: 1;
   display: grid;
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 3.3rem;
+  height: 3.3rem;
   flex-shrink: 0;
   place-items: center;
-  border: 1px solid rgba($micro-green-line, 0.7);
   border-radius: 50%;
-  background-color: $micro-green-soft;
+  background-color: #edf1b9;
   color: $micro-green;
 }
 
 .microgreens__icon svg {
-  width: 1.55rem;
-  height: 1.55rem;
+  width: 2rem;
+  height: 2rem;
+  stroke-width: 1.8;
 }
 
 .microgreens__copy {
@@ -151,17 +151,17 @@ $micro-line: #e6dfcf;
 
 .microgreens__name {
   margin: 0;
-  color: #16281a;
+  color: #0b2a10;
   font-family: $body-font-family;
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: 700;
   line-height: 1.25;
 }
 
 .microgreens__description {
-  margin: 0.25rem 0 0;
-  color: #4b5247;
-  font-size: 1rem;
+  margin: 0.2rem 0 0;
+  color: #3b3d38;
+  font-size: 1.05rem;
   line-height: 1.45;
 }
 
@@ -170,7 +170,7 @@ $micro-line: #e6dfcf;
   right: -1px;
   bottom: -1px;
   z-index: 0;
-  width: 56%;
+  width: 34%;
   height: 100%;
   fill: $micro-wave;
   pointer-events: none;
@@ -367,17 +367,17 @@ $micro-line: #e6dfcf;
   }
 
   .microgreens__icon {
-    width: 2.05rem;
-    height: 2.05rem;
+    width: 2.35rem;
+    height: 2.35rem;
   }
 
   .microgreens__icon svg {
-    width: 1.15rem;
-    height: 1.15rem;
+    width: 1.4rem;
+    height: 1.4rem;
   }
 
   .microgreens__name {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
   }
 
   .microgreens__description {
