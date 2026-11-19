@@ -170,8 +170,8 @@ $micro-line: #e6dfcf;
   right: -1px;
   bottom: -1px;
   z-index: 0;
-  width: 46%;
-  height: 3.6rem;
+  width: 56%;
+  height: 100%;
   fill: $micro-wave;
   pointer-events: none;
 }
@@ -179,35 +179,46 @@ $micro-line: #e6dfcf;
 .microgreens__promo {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 0;
   margin-top: 2rem;
-  padding: 0.4rem;
-  border: 1px solid $micro-line;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #dfe4cd;
   border-radius: 999px;
-  background-color: rgba(#ffffff, 0.55);
+  background-color: #fbf9f0;
 }
 
 .microgreens__promo-lead {
+  position: relative;
   display: flex;
-  flex: 0 1 44%;
+  flex: 0 0 39%;
   align-items: center;
-  gap: 1rem;
-  padding: 0.85rem 1.75rem 0.85rem 1.35rem;
-  border-radius: 999px;
+  gap: 0.85rem;
+  padding: 0.95rem 1.6rem 0.95rem 1.9rem;
   background-color: $micro-green;
   color: #ffffff;
 }
 
 .microgreens__promo-lead p {
   margin: 0;
-  font-size: 1.02rem;
+  font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.4;
 }
 
+.microgreens__promo-tail {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 3.25rem;
+  height: 100%;
+  fill: $micro-green;
+  pointer-events: none;
+}
+
 .microgreens__promo-icon {
-  width: 1.9rem;
-  height: 1.9rem;
+  width: 2.1rem;
+  height: 2.1rem;
   flex-shrink: 0;
 }
 
@@ -217,7 +228,7 @@ $micro-line: #e6dfcf;
   justify-content: space-between;
   gap: 1rem;
   margin: 0;
-  padding: 0 1.5rem 0 0;
+  padding: 0 1.75rem 0 4.5rem;
   list-style: none;
 }
 
@@ -226,14 +237,14 @@ $micro-line: #e6dfcf;
   align-items: center;
   gap: 0.5rem;
   color: $micro-green;
-  font-size: 0.98rem;
+  font-size: 1.05rem;
   font-weight: 700;
   line-height: 1.3;
 }
 
 .microgreens__promo-list svg {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
   flex-shrink: 0;
   color: $micro-green;
 }
@@ -282,6 +293,10 @@ $micro-line: #e6dfcf;
     flex: 0 0 auto;
     border-radius: 1.3rem;
     padding: 1rem 1.35rem;
+  }
+
+  .microgreens__promo-tail {
+    display: none;
   }
 
   .microgreens__promo-list {

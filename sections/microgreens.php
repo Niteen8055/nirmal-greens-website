@@ -33,7 +33,7 @@
                             <p class="microgreens__description">Crisp, earthy and vibrant.</p>
                         </div>
                         <svg class="microgreens__wave" viewBox="0 0 240 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-                            <path d="M0 100C40 100 60 58 120 48c50-9 85-18 120-26v78Z"/>
+                            <path d="M0 100C55 100 78 74 120 56c42-18 78-20 120-16V100Z"/>
                         </svg>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                             <p class="microgreens__description">Fresh, peppery and lively.</p>
                         </div>
                         <svg class="microgreens__wave" viewBox="0 0 240 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-                            <path d="M0 100C40 100 60 58 120 48c50-9 85-18 120-26v78Z"/>
+                            <path d="M0 100C55 100 78 74 120 56c42-18 78-20 120-16V100Z"/>
                         </svg>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                             <p class="microgreens__description">Bold flavor with a fresh snap.</p>
                         </div>
                         <svg class="microgreens__wave" viewBox="0 0 240 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-                            <path d="M0 100C40 100 60 58 120 48c50-9 85-18 120-26v78Z"/>
+                            <path d="M0 100C55 100 78 74 120 56c42-18 78-20 120-16V100Z"/>
                         </svg>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                             <p class="microgreens__description">Aromatic, with a mildly bitter note.</p>
                         </div>
                         <svg class="microgreens__wave" viewBox="0 0 240 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-                            <path d="M0 100C40 100 60 58 120 48c50-9 85-18 120-26v78Z"/>
+                            <path d="M0 100C55 100 78 74 120 56c42-18 78-20 120-16V100Z"/>
                         </svg>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                             <p class="microgreens__description">Nutty, crisp and satisfying.</p>
                         </div>
                         <svg class="microgreens__wave" viewBox="0 0 240 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-                            <path d="M0 100C40 100 60 58 120 48c50-9 85-18 120-26v78Z"/>
+                            <path d="M0 100C55 100 78 74 120 56c42-18 78-20 120-16V100Z"/>
                         </svg>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
                             <p class="microgreens__description">Tender, leafy and versatile.</p>
                         </div>
                         <svg class="microgreens__wave" viewBox="0 0 240 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-                            <path d="M0 100C40 100 60 58 120 48c50-9 85-18 120-26v78Z"/>
+                            <path d="M0 100C55 100 78 74 120 56c42-18 78-20 120-16V100Z"/>
                         </svg>
                     </div>
                 </div>
@@ -172,6 +172,9 @@
                     <path d="M12 12c5 0 8-3 8-8-5 0-8 3-8 8Z"/>
                 </svg>
                 <p>Choose from these 6 nutrient-rich microgreens in our subscription plans.</p>
+                <svg class="microgreens__promo-tail" viewBox="0 0 64 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                    <path d="M0 0h10c20 6 30 28 34 52 3 22 10 42 20 48H0Z"/>
+                </svg>
             </div>
             <ul class="microgreens__promo-list">
                 <li>
