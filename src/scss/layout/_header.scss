@@ -193,6 +193,7 @@
 
 @media (max-width: 1199.98px) {
 	.site-header__content {
+		order: 3;
 		padding-block: 0.75rem 1rem;
 	}
 
@@ -206,7 +207,25 @@
 	}
 
 	.site-header__actions {
-		margin: 0.65rem 0 0;
+		order: 1;
+		gap: 0.35rem;
+		margin: 0 0 0 auto;
+	}
+
+	.site-header .navbar-toggler {
+		order: 2;
+	}
+
+	.site-header__search-form {
+		position: fixed;
+		top: 4.5rem;
+		right: 1rem;
+		left: 1rem;
+		width: auto;
+	}
+
+	.site-header__shop-button {
+		display: none;
 	}
 }
 
