@@ -32,7 +32,7 @@
                             <h3 class="microgreens__name">Broccoli</h3>
                             <p class="microgreens__description">Crisp, earthy and vibrant.</p>
                         </div>
-                        <svg class="microgreens__wave" viewBox="0 0 240 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                        <svg class="microgreens__wave" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
                             <path d="M0 100C18 97 34 84 52 64c18-20 32-26 48-26V100Z"/>
                         </svg>
                     </div>
@@ -56,7 +56,7 @@
                             <h3 class="microgreens__name">Pink Radish</h3>
                             <p class="microgreens__description">Fresh, peppery and lively.</p>
                         </div>
-                        <svg class="microgreens__wave" viewBox="0 0 240 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                        <svg class="microgreens__wave" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
                             <path d="M0 100C18 97 34 84 52 64c18-20 32-26 48-26V100Z"/>
                         </svg>
                     </div>
@@ -82,7 +82,7 @@
                             <h3 class="microgreens__name">Mustard</h3>
                             <p class="microgreens__description">Bold flavor with a fresh snap.</p>
                         </div>
-                        <svg class="microgreens__wave" viewBox="0 0 240 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                        <svg class="microgreens__wave" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
                             <path d="M0 100C18 97 34 84 52 64c18-20 32-26 48-26V100Z"/>
                         </svg>
                     </div>
@@ -107,7 +107,7 @@
                             <h3 class="microgreens__name">Fenugreek</h3>
                             <p class="microgreens__description">Aromatic, with a mildly bitter note.</p>
                         </div>
-                        <svg class="microgreens__wave" viewBox="0 0 240 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                        <svg class="microgreens__wave" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
                             <path d="M0 100C18 97 34 84 52 64c18-20 32-26 48-26V100Z"/>
                         </svg>
                     </div>
@@ -131,7 +131,7 @@
                             <h3 class="microgreens__name">Sunflower</h3>
                             <p class="microgreens__description">Nutty, crisp and satisfying.</p>
                         </div>
-                        <svg class="microgreens__wave" viewBox="0 0 240 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                        <svg class="microgreens__wave" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
                             <path d="M0 100C18 97 34 84 52 64c18-20 32-26 48-26V100Z"/>
                         </svg>
                     </div>
@@ -156,7 +156,7 @@
                             <h3 class="microgreens__name">Spinach</h3>
                             <p class="microgreens__description">Tender, leafy and versatile.</p>
                         </div>
-                        <svg class="microgreens__wave" viewBox="0 0 240 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                        <svg class="microgreens__wave" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
                             <path d="M0 100C18 97 34 84 52 64c18-20 32-26 48-26V100Z"/>
                         </svg>
                     </div>
