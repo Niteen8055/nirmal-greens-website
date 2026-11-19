@@ -7,7 +7,7 @@
                 <p class="how-it-works__eyebrow">From Growing Greens to Your Plate</p>
                 <span class="how-it-works__title-wrap">
                     <svg class="how-it-works__title-stroke" viewBox="0 0 420 30" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-                        <path d="M6 21C84 9 168 5 246 8c52 2 104 7 168 5" fill="none" stroke="#8cbf3f" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M6 21C84 9 168 5 246 8c52 2 104 7 168 5" fill="none" stroke="#8cbf3f" stroke-width="13" stroke-linecap="round"/>
                     </svg>
                     <h2 class="how-it-works__title" id="how-it-works-title">How It Works?</h2>
                 </span>
