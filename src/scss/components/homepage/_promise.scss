@@ -1,0 +1,234 @@
+@use "../../abstracts/variables" as *;
+
+$promise-dark: #0c2e10;
+$promise-cream: $warm-cream;
+$promise-accent: $accent-sage-strong;
+$promise-icon: #86c94f;
+
+.promise {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: min(56vw, 54rem);
+    padding: $section-space 0;
+    background-color: $promise-dark;
+    background-image: url("/img/home/promise/nirmal-greens-section-4-brand-bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    color: $promise-cream;
+
+    &::before {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: linear-gradient(90deg, rgba($promise-dark, 0.8) 0%, rgba($promise-dark, 0.55) 100%);
+        content: "";
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.promise__container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: none;
+    padding-inline: clamp(1.5rem, 5vw, 5rem);
+}
+
+.promise__intro {
+    max-width: 50rem;
+}
+
+/* Eyebrow */
+.promise__eyebrow-icon {
+    width: clamp(2rem, 2.8vw, 2.75rem);
+    height: clamp(2rem, 2.8vw, 2.75rem);
+    color: $promise-accent;
+}
+
+.promise__line {
+    flex: 1 1 0;
+    min-width: 1.5rem;
+    border-top: 1.5px solid rgba($promise-accent, 0.6);
+}
+
+.promise__eyebrow-text {
+    color: $promise-accent;
+    font-size: clamp(0.78rem, 1.1vw, 1.05rem);
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    line-height: 1.3;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Heading + tagline */
+.promise__title {
+    margin: clamp(1.5rem, 3vw, 2.75rem) 0 0;
+    color: $promise-cream;
+    font-family: $heading-font-family;
+    font-size: clamp(2.5rem, 4.8vw, 5.25rem);
+    font-weight: 700;
+    line-height: 1.08;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.25);
+}
+
+.promise__tagline {
+    margin: clamp(1rem, 1.8vw, 1.75rem) 0 0;
+    color: $promise-cream;
+    font-family: $heading-font-family;
+    font-size: clamp(1.2rem, 2.35vw, 2.4rem);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.promise__tagline-accent {
+    display: block;
+    color: $promise-accent;
+}
+
+/* Pillars */
+.promise__pillars {
+    max-width: 44rem;
+    margin-top: clamp(2.25rem, 4.5vw, 4.5rem) !important;
+}
+
+.promise__pillar {
+    position: relative;
+    padding-inline: clamp(0.5rem, 1.5vw, 1.5rem);
+
+    & + &::before {
+        position: absolute;
+        top: 0.5rem;
+        bottom: 0.5rem;
+        left: 0;
+        border-left: 1px solid rgba($promise-cream, 0.3);
+        content: "";
+    }
+
+    &:nth-child(2) {
+        --reveal-delay: 80ms;
+    }
+
+    &:nth-child(3) {
+        --reveal-delay: 160ms;
+    }
+}
+
+.promise__icon {
+    display: inline-block;
+    color: $promise-icon;
+
+    svg {
+        display: block;
+        width: clamp(2.6rem, 3.6vw, 3.6rem);
+        height: clamp(2.6rem, 3.6vw, 3.6rem);
+    }
+}
+
+.promise__label {
+    margin-top: 0.7rem !important;
+    color: $promise-cream;
+    font-size: clamp(0.9rem, 1.3vw, 1.3rem);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+@media (min-width: 1600px) {
+    .promise__container {
+        padding-inline: max(5rem, calc((100vw - 1600px) / 2 + 5rem));
+    }
+}
+
+/* Tablet */
+@media (max-width: 1199.98px) {
+    .promise {
+        min-height: 0;
+        background-position: 78% center;
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    .promise__intro {
+        max-width: 40rem;
+    }
+
+    .promise__title {
+        font-size: clamp(2.3rem, 6.4vw, 3.6rem);
+    }
+
+    .promise__tagline {
+        font-size: clamp(1.2rem, 3vw, 1.75rem);
+    }
+
+    .promise__pillars {
+        max-width: 34rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+    .promise {
+        padding: 3rem 0 2.5rem;
+        background-position: 82% center;
+    }
+
+    .promise__container {
+        padding-inline: 1.25rem;
+    }
+
+    .promise__eyebrow-text {
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+    }
+
+    .promise__title {
+        margin-top: 1.5rem;
+        font-size: clamp(2rem, 9vw, 2.5rem);
+    }
+
+    .promise__tagline {
+        font-size: 1.15rem;
+    }
+
+    .promise__pillars {
+        margin-top: 2rem !important;
+    }
+
+    .promise__pillar {
+        padding-inline: 0.35rem;
+    }
+
+    .promise__icon svg {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .promise__label {
+        font-size: 0.8rem;
+    }
+}
+
+/* Scroll reveal (same pattern as the other sections) */
+.has-scroll-reveal .promise [data-reveal] {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 480ms ease var(--reveal-delay, 0ms), transform 480ms ease var(--reveal-delay, 0ms);
+}
+
+.has-scroll-reveal .promise [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .has-scroll-reveal .promise [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

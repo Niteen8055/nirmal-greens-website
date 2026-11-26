@@ -44,7 +44,7 @@ body.preloader-open {
   height: 0.125rem;
   margin-top: 1.3rem;
   overflow: hidden;
-  border-radius: 999px;
+  border-radius: $radius-pill;
   background: rgba($primary-color, 0.14);
 }
 

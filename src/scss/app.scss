@@ -1,20 +1,27 @@
 @use "abstracts/variables" as *;
+@use "base/fonts";
 @use "base/reset";
 @use "base/typography";
 @use "base/global";
 
-@use "components/buttons";
-@use "components/cards";
 @use "components/preloader";
 @use "components/scroll-progress";
 @use "components/homepage/benefits";
+@use "components/homepage/philosophy";
+@use "components/homepage/growing-space";
 @use "components/homepage/hero";
 @use "components/homepage/how-it-works";
 @use "components/homepage/microgreens";
+@use "components/homepage/promise";
+@use "components/homepage/nutrition";
 @use "components/homepage/subscriptions";
 @use "components/homepage/recipes";
+@use "components/homepage/faq";
 @use "components/homepage/cta";
 
 @use "layout/header";
 @use "layout/footer";
 @use "layout/container";
+
+// Loaded last so pressed states win over component hover transforms.
+@use "components/buttons";

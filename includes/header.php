@@ -16,35 +16,37 @@
                     <li class="nav-item"><a class="nav-link" href="#subscriptions">Subscriptions</a></li>
                     <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
                     <li class="nav-item"><a class="nav-link" href="#recipes">Recipes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
                 </ul>
+            </div>
 
-                <div class="site-header__actions">
-                    <details class="site-header__search">
-                        <summary class="site-header__icon-button" aria-label="Open search">
-                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                <circle cx="10.8" cy="10.8" r="6.3"></circle>
-                                <path d="m15.5 15.5 4.2 4.2"></path>
-                            </svg>
-                        </summary>
-                        <form class="site-header__search-form" role="search" action="/" method="get">
-                            <label class="visually-hidden" for="site-search">Search Nirmal Greens</label>
-                            <input class="form-control" id="site-search" name="q" type="search" placeholder="Search">
-                            <button class="btn" type="submit">Search</button>
-                        </form>
-                    </details>
-
-                    <a class="site-header__icon-button" href="#subscriptions" aria-label="Browse subscription plans">
+            <div class="site-header__actions">
+                <details class="site-header__search" id="site-header-search">
+                    <summary class="site-header__icon-button" aria-label="Open search" aria-expanded="false" aria-controls="site-header-search-form">
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                            <path d="M3.5 4.5h2l2.1 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.5L21 8H6.1"></path>
-                            <circle cx="10" cy="20" r="1"></circle>
-                            <circle cx="18" cy="20" r="1"></circle>
+                            <circle cx="10.8" cy="10.8" r="6.3"></circle>
+                            <path d="m15.5 15.5 4.2 4.2"></path>
                         </svg>
-                    </a>
+                    </summary>
+                    <form class="site-header__search-form" id="site-header-search-form" role="search" action="/" method="get">
+                        <label class="visually-hidden" for="site-search">Search Nirmal Greens</label>
+                        <input class="form-control" id="site-search" name="q" type="search" placeholder="Search">
+                        <button class="btn" type="submit">Search</button>
+                    </form>
+                </details>
 
-                    <a class="site-header__shop-button" href="#subscriptions">Shop Now</a>
-                </div>
+                <a class="site-header__icon-button" href="#subscriptions" aria-label="Browse subscription plans">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M3.5 4.5h2l2.1 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.5L21 8H6.1"></path>
+                        <circle cx="10" cy="20" r="1"></circle>
+                        <circle cx="18" cy="20" r="1"></circle>
+                    </svg>
+                </a>
+
+                <a class="site-header__shop-button" href="#subscriptions">
+                    Shop Now<span aria-hidden="true">&#8594;</span>
+                </a>
             </div>
         </div>
     </nav>

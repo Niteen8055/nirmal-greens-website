@@ -1,9 +1,23 @@
-@use "sass:color";
 @use "../../abstracts/variables" as *;
 
+$micro-sand: #f7f1e4;
+$micro-cream: #fef8ef;
+$micro-green: #1d5327;
+$micro-green-soft: #e8f1d5;
+$micro-green-line: #b9cc93;
+$micro-wave: #e3ebb7;
+$micro-line: #e6dfcf;
+
 .microgreens {
-  padding-block: 3rem 4rem;
-  background-color: #f6f7f0;
+  padding-block: 2.75rem 3.75rem;
+  background-color: $micro-sand;
+}
+
+.microgreens--bg {
+  background-image: url("/img/home/microgreens/nirmal-greens-microgreens-background.webp");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .microgreens__container {
@@ -11,40 +25,53 @@
 }
 
 .microgreens__header {
-  max-width: 42rem;
-  margin: 0 auto 2.25rem;
+  max-width: 48rem;
+  margin: 0 auto 2rem;
   text-align: center;
 }
 
-.microgreens__eyebrow {
-  margin: 0 0 0.5rem;
-  color: $primary-color;
-  font-size: 0.8rem;
+.microgreens__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 1.1rem;
+  padding: 0.55rem 1.9rem;
+  border: 1px solid $micro-green-line;
+  border-radius: $radius-pill;
+  background-color: $micro-green-soft;
+  color: $micro-green;
+  font-size: 1.05rem;
   font-weight: 700;
   line-height: 1.3;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.microgreens__badge-icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  flex-shrink: 0;
 }
 
 .microgreens__title {
   margin: 0;
-  color: $secondary-color;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.4rem, 2.7vw, 3.3rem);
+  color: $micro-green;
+  font-family: $heading-font-family;
+  font-size: $title-section;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.12;
 }
 
 .microgreens__intro {
-  max-width: 34rem;
-  margin: 0.5rem auto 0;
-  color: $body-text-color;
-  font-size: 1rem;
-  line-height: 1.65;
+  max-width: 54rem;
+  margin: 0.75rem auto 0;
+  color: #4c5146;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 .microgreens__grid {
-  row-gap: 1.5rem;
+  --bs-gutter-y: 1.75rem;
+  row-gap: 1.75rem;
 }
 
 .microgreens__item {
@@ -57,28 +84,28 @@
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  border: 1px solid rgba($secondary-color, 0.08);
-  border-radius: 1.25rem;
-  background-color: #ffffff;
-  box-shadow: 0 0.6rem 1.4rem rgba($secondary-color, 0.04);
+  border: 1px solid $micro-line;
+  border-radius: $radius-card-md;
+  background-color: $micro-cream;
+  box-shadow: 0 0.5rem 1.2rem rgba($secondary-color, 0.05);
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
 .microgreens__card:hover {
-  border-color: rgba($primary-color, 0.18);
-  box-shadow: 0 0.9rem 1.8rem rgba($secondary-color, 0.08);
-  transform: translateY(-2px);
+  border-color: rgba($micro-green-line, 0.9);
+  box-shadow: 0 0.9rem 1.6rem rgba($secondary-color, 0.1);
+  transform: translateY(-3px);
 }
 
 .microgreens__media {
   overflow: hidden;
-  background-color: #f6f4ef;
+  background-color: #f2ede1;
 }
 
 .microgreens__image {
   display: block;
   width: 100%;
-  height: 17rem;
+  height: 12.5rem;
   object-fit: cover;
   object-position: center;
   transition: transform 300ms ease;
@@ -89,59 +116,137 @@
 }
 
 .microgreens__body {
+  position: relative;
   display: flex;
   flex: 1 1 auto;
-  flex-direction: column;
-  gap: 0.45rem;
-  padding: 1rem 1rem 1.1rem;
+  align-items: center;
+  gap: 1.25rem;
+  overflow: hidden;
+  padding: 0.75rem 1.3rem;
+}
+
+.microgreens__icon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 3.3rem;
+  height: 3.3rem;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  background-color: #edf1b9;
+  color: $micro-green;
+}
+
+.microgreens__icon svg {
+  width: 2rem;
+  height: 2rem;
+  stroke-width: 1.8;
+}
+
+.microgreens__copy {
+  position: relative;
+  z-index: 1;
 }
 
 .microgreens__name {
   margin: 0;
-  color: $secondary-color;
-  font-size: 1.28rem;
+  color: #0b2a10;
+  font-family: $body-font-family;
+  font-size: 1.45rem;
   font-weight: 700;
   line-height: 1.25;
 }
 
 .microgreens__description {
-  margin: 0;
-  color: $body-text-color;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  margin: 0.2rem 0 0;
+  color: #3b3d38;
+  font-size: 1.05rem;
+  line-height: 1.45;
 }
 
-.microgreens__cta {
-  display: inline-flex;
+.microgreens__wave {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  z-index: 0;
+  width: 34%;
+  height: 100%;
+  fill: $micro-wave;
+  pointer-events: none;
+}
+
+.microgreens__promo {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  width: fit-content;
-  margin-top: auto;
-  padding: 0.55rem 0.9rem;
-  border: 1px solid rgba($primary-color, 0.18);
-  border-radius: 999px;
-  background-color: rgba($primary-color, 0.06);
-  color: $primary-color;
-  font-size: 0.8rem;
+  gap: 0;
+  margin-top: 2rem;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #dfe4cd;
+  border-radius: $radius-pill;
+  background-color: #fbf9f0;
+}
+
+.microgreens__promo-lead {
+  position: relative;
+  display: flex;
+  flex: 0 0 39%;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.95rem 1.6rem 0.95rem 1.9rem;
+  background-color: $micro-green;
+  color: $surface-color;
+}
+
+.microgreens__promo-lead p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.microgreens__promo-tail {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 3.25rem;
+  height: 100%;
+  fill: $micro-green;
+  pointer-events: none;
+}
+
+.microgreens__promo-icon {
+  width: 2.1rem;
+  height: 2.1rem;
+  flex-shrink: 0;
+}
+
+.microgreens__promo-list {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0;
+  padding: 0 1.75rem 0 4.5rem;
+  list-style: none;
+}
+
+.microgreens__promo-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $micro-green;
+  font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  line-height: 1.2;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: background-color 220ms ease, border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+  line-height: 1.3;
 }
 
-.microgreens__cta:hover,
-.microgreens__cta:focus-visible {
-  background-color: rgba($primary-color, 0.1);
-  border-color: rgba($primary-color, 0.28);
-  box-shadow: 0 0.4rem 1rem rgba($primary-color, 0.16);
-  transform: translateY(-1px);
-}
-
-.microgreens__cta:focus-visible {
-  outline: 2px solid rgba($primary-color, 0.7);
-  outline-offset: 2px;
+.microgreens__promo-list svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  color: $micro-green;
 }
 
 .microgreens [data-reveal] {
@@ -175,13 +280,44 @@
   --reveal-delay: 320ms;
 }
 
+@media (max-width: 1199.98px) {
+  .microgreens__promo {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    padding: 0.5rem;
+    border-radius: 1.6rem;
+  }
+
+  .microgreens__promo-lead {
+    flex: 0 0 auto;
+    border-radius: 1.3rem;
+    padding: 1rem 1.35rem;
+  }
+
+  .microgreens__promo-tail {
+    display: none;
+  }
+
+  .microgreens__promo-list {
+    justify-content: space-around;
+    padding: 0.4rem 0.75rem 0.6rem;
+  }
+}
+
 @media (max-width: 991.98px) {
   .microgreens {
-    padding-block: 2.5rem 3.25rem;
+    padding-block: 2.75rem 3.25rem;
   }
 
   .microgreens__image {
-    height: 15rem;
+    height: 11.5rem;
+  }
+
+  .microgreens__promo-list {
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.35rem 0.9rem 0.75rem;
   }
 }
 
@@ -190,12 +326,24 @@
     margin-bottom: 1.75rem;
   }
 
+  .microgreens__badge {
+    font-size: 0.9rem;
+  }
+
+  .microgreens__title {
+    font-size: 2.05rem;
+  }
+
   .microgreens__intro {
     font-size: 0.9rem;
   }
 
   .microgreens__image {
-    height: 14rem;
+    height: 9.5rem;
+  }
+
+  .microgreens__body {
+    padding: 0.9rem 0.9rem 1rem;
   }
 }
 
@@ -204,32 +352,71 @@
     padding-block: 2.25rem 2.75rem;
   }
 
-  .microgreens__title {
-    font-size: 2rem;
+  .microgreens__grid {
+    row-gap: 0.9rem;
   }
 
   .microgreens__image {
-    height: 13rem;
+    height: 7rem;
   }
 
   .microgreens__body {
-    padding: 0.9rem 0.9rem 1rem;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.6rem 0.55rem 0.7rem;
+  }
+
+  .microgreens__icon {
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+
+  .microgreens__icon svg {
+    width: 1.4rem;
+    height: 1.4rem;
   }
 
   .microgreens__name {
-    font-size: 1.08rem;
+    font-size: 0.95rem;
   }
 
   .microgreens__description {
-    font-size: 0.8rem;
+    margin-top: 0.1rem;
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  .microgreens__wave {
+    height: 2.6rem;
+  }
+
+  .microgreens__promo {
+    margin-top: 1.5rem;
+  }
+
+  .microgreens__promo-lead {
+    gap: 0.7rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .microgreens__promo-lead p {
+    font-size: 0.9rem;
+  }
+
+  .microgreens__promo-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .microgreens__promo-list li {
+    font-size: 0.85rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .microgreens [data-reveal],
   .microgreens__card,
-  .microgreens__image,
-  .microgreens__cta {
+  .microgreens__image {
     opacity: 1;
     transform: none;
     transition: none;

@@ -1,8 +1,25 @@
 @use "../../abstracts/variables" as *;
 
 .benefits {
-  padding-block: 0.35rem;
-  background-color: $surface-color;
+  padding-block: 0.9rem;
+  background-color: #faf8f0;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1200px) {
+  .benefits {
+    background-image: linear-gradient(rgba(250, 248, 240, 0.86), rgba(250, 248, 240, 0.86)), url("/img/home/microgreens/nirmal-greens-microgreens-background.webp");
+    background-size: 100% auto;
+  }
+
+  .benefits > .container {
+    max-width: 1100px;
+  }
+}
+
+.benefits__mobile-card {
+  display: none;
 }
 
 .benefits__list {
@@ -18,12 +35,12 @@
   position: relative;
   display: flex;
   width: 100%;
-  min-height: 6.1rem;
+  min-height: 6.6rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.45rem;
-  padding: 0.65rem 0.45rem;
+  gap: 0.5rem;
+  padding: 0.55rem 0.45rem;
   color: $secondary-color;
   text-align: center;
   animation: benefits-enter 420ms ease-out both;
@@ -57,18 +74,18 @@
 
 .benefits__column + .benefits__column .benefits__item::before {
   position: absolute;
-  top: 14%;
-  bottom: 14%;
+  top: 8%;
+  bottom: 8%;
   left: 0;
-  border-left: 1px solid $border-color;
+  border-left: 1px solid #d9d7c6;
   content: "";
 }
 
 .benefits__icon {
   display: block;
-  width: 2rem;
-  height: 2rem;
-  flex: 0 0 2rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  flex: 0 0 2.2rem;
   object-fit: contain;
   transition: transform 220ms ease;
 }
@@ -77,15 +94,16 @@
   display: grid;
   gap: 0.12rem;
   margin: 0;
-  font-size: 0.83rem;
+  font-size: 0.95rem;
   line-height: 1.35;
 
   strong {
-    font-weight: 650;
+    font-weight: 700;
   }
 
   span {
     font-weight: 400;
+    color: #3d463b;
   }
 }
 
@@ -130,6 +148,105 @@
 
   .benefits__copy {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .benefits {
+    padding: 0 0.75rem 2rem;
+    background-color: #fbf3e7;
+  }
+
+  .benefits > .container {
+    padding-inline: 0;
+  }
+
+  .benefits__list--desktop {
+    display: none;
+  }
+
+  .benefits__mobile-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 0.9rem 0.35rem 2.8rem;
+    border-radius: 1.4rem;
+    background: #fffdf4;
+    box-shadow: 0 0.6rem 1.5rem rgba(24, 48, 20, 0.08);
+  }
+
+  .benefits__list--mobile {
+    align-items: stretch;
+    margin: 0;
+  }
+
+  .benefits__list--mobile .benefits__column + .benefits__column {
+    border-left: 1px solid rgba($secondary-color, 0.12);
+  }
+
+  .benefits__list--mobile .benefits__item {
+    min-height: 5.6rem;
+    gap: 0.35rem;
+    padding: 0.25rem;
+    animation: none;
+  }
+
+  .benefits__list--mobile .benefits__item::before {
+    content: none;
+  }
+
+  .benefits__list--mobile .benefits__icon {
+    width: clamp(1.7rem, 3vw, 2rem);
+    height: clamp(1.7rem, 3vw, 2rem);
+    flex-basis: clamp(1.7rem, 3vw, 2rem);
+    color: $primary-color;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .benefits__list--mobile .benefits__copy {
+    font-size: clamp(0.62rem, 1.5vw, 0.8rem);
+    line-height: 1.25;
+  }
+
+  .benefits__wave {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2.2rem;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .benefits__list--mobile {
+    flex-wrap: wrap;
+  }
+
+  .benefits__list--mobile .benefits__column {
+    max-width: 50%;
+    flex: 0 0 50%;
+    border-left: 0;
+  }
+
+  .benefits__list--mobile .benefits__column:nth-child(even) {
+    border-left: 1px solid rgba($secondary-color, 0.12);
+  }
+
+  .benefits__list--mobile .benefits__column:nth-child(n + 3) {
+    border-top: 1px solid rgba($secondary-color, 0.12);
+  }
+
+  .benefits__list--mobile .benefits__item {
+    min-height: 5rem;
+  }
+
+  .benefits__list--mobile .benefits__copy {
+    font-size: 0.72rem;
   }
 }
 

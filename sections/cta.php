@@ -1,21 +1,23 @@
 <section class="final-cta" id="final-cta" aria-labelledby="final-cta-title">
-    <div class="container final-cta__container">
+    <div class="container-fluid final-cta__container">
         <div class="final-cta__panel">
-            <div class="row align-items-center final-cta__layout">
-                <div class="col-12 col-lg-7 col-xl-6 final-cta__content" data-reveal>
-                    <p class="final-cta__eyebrow">Nirmal Greens</p>
-                    <h2 class="final-cta__title" id="final-cta-title">
-                        <span>Ready to Bring Freshness</span>
-                        <span>to Your Meals?</span>
-                    </h2>
-                    <p class="final-cta__copy">Make fresh microgreens a regular part of your diet with our convenient subscription plans.</p>
-                    <div class="final-cta__actions">
-                        <a class="final-cta__button final-cta__button--primary" href="#subscriptions">View Subscriptions</a>
-                        <a class="final-cta__button final-cta__button--secondary" href="#microgreens">Shop Now</a>
-                    </div>
+            <div class="final-cta__content" data-reveal>
+                <h2 class="final-cta__title" id="final-cta-title">
+                    Bring home a fresher everyday.
+                </h2>
+                <p class="final-cta__copy">
+                    Fresh, flavourful microgreens, harvested with care and delivered to your Bengaluru doorstep.
+                </p>
+                <div class="final-cta__actions">
+                    <a class="final-cta__button final-cta__button--primary" href="#subscriptions">
+                        <span>Explore subscription plans</span>
+                        <span class="final-cta__button-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a class="final-cta__button final-cta__button--secondary" href="#microgreens">
+                        Shop individual greens
+                    </a>
                 </div>
             </div>
-            <img class="final-cta__handwritten" src="/img/home/cta/fresh-healthy-naturally.png" alt="" aria-hidden="true" loading="eager" decoding="async" data-reveal>
         </div>
     </div>
 </section>

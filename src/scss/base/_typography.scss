@@ -2,9 +2,10 @@
 
 body {
   font-family: $body-font-family;
-  font-size: $font-size-base;
   color: $body-text-color;
+  font-weight: $font-weight-regular;
   line-height: $line-height-body;
+  font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -26,6 +27,7 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
+  font-weight: $font-weight-bold;
   line-height: $line-height-heading;
   letter-spacing: -0.02em;
   color: $secondary-color;

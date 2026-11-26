@@ -29,15 +29,18 @@
     const clamp = (value, minimum, maximum) => Math.min(Math.max(value, minimum), maximum);
 
     const updateScrollProgress = () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight || 0;
-      const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
-      const maxScroll = Math.max(scrollHeight - viewportHeight, 1);
-      const percent = clamp((scrollTop / maxScroll) * 100, 0, 100);
+      const scrollingElement = document.scrollingElement || document.documentElement;
+      const scrollTop = Math.max(window.scrollY || scrollingElement.scrollTop || document.body.scrollTop || 0, 0);
+      const scrollHeight = Math.max(scrollingElement.scrollHeight, document.body.scrollHeight);
+      const viewportHeight = window.innerHeight || scrollingElement.clientHeight || 0;
+      const maxScroll = Math.max(scrollHeight - viewportHeight, 0);
+      const percent = maxScroll > 0 ? clamp((scrollTop / maxScroll) * 100, 0, 100) : 0;
       const roundedPercent = Math.round(percent);
 
       progressValue.textContent = `${roundedPercent}%`;
-      progressIndicator.setAttribute('aria-label', `Back to top, ${roundedPercent} percent`);
+      progressIndicator.style.setProperty('--scroll-progress', `${percent}%`);
+      progressIndicator.setAttribute('aria-label', `Scroll to top. Current page progress: ${roundedPercent}%.`);
+      progressIndicator.classList.toggle('is-visible', scrollTop > 50);
     };
 
     let frameId = null;
@@ -63,6 +66,37 @@
     window.addEventListener('scroll', scheduleUpdate, { passive: true });
     window.addEventListener('resize', scheduleUpdate, { passive: true });
     updateScrollProgress();
+  }
+
+  const searchDetails = document.getElementById('site-header-search');
+  const searchSummary = searchDetails?.querySelector('summary');
+
+  if (searchDetails && searchSummary) {
+    const updateSearchState = () => {
+      const isOpen = searchDetails.open;
+      searchSummary.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    searchDetails.addEventListener('toggle', updateSearchState);
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && searchDetails.open) {
+        searchDetails.open = false;
+        updateSearchState();
+        searchSummary.focus();
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!searchDetails.open) {
+        return;
+      }
+
+      if (!searchDetails.contains(event.target)) {
+        searchDetails.open = false;
+        updateSearchState();
+      }
+    });
   }
 
   const preloader = document.getElementById('preloader');

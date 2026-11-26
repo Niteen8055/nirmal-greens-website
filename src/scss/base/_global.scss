@@ -1,5 +1,46 @@
 @use "../abstracts/variables" as *;
 
+:root {
+  --ng-color-brand: #{$brand-green};
+  --ng-color-primary: #{$primary-color};
+  --ng-color-forest: #{$secondary-color};
+  --ng-color-lime: #{$accent-lime};
+  --ng-color-sage: #{$accent-sage};
+  --ng-color-sage-strong: #{$accent-sage-strong};
+  --ng-color-cream: #{$warm-cream};
+  --ng-color-surface: #{$surface-color};
+  --ng-color-surface-soft: #{$surface-soft};
+  --ng-color-text: #{$body-text-color};
+  --ng-color-muted: #{$muted-text-color};
+  --ng-color-border: #{$border-color};
+  --ng-font-body: #{$body-font-family};
+  --ng-font-heading: #{$heading-font-family};
+  --ng-type-eyebrow: #{$font-size-eyebrow};
+  --ng-type-eyebrow-compact: #{$font-size-eyebrow-compact};
+  --ng-type-eyebrow-growing: #{$font-size-eyebrow-growing};
+  --ng-type-body: #{$font-size-body-mobile};
+  --ng-type-body-wide: #{$font-size-body-desktop};
+  --ng-section-space: #{$section-space};
+  --ng-section-space-compact: #{$section-space-compact};
+  --ng-section-space-growing: #{$section-space-growing};
+  --ng-container-width: #{$container-max-width};
+  --ng-container-width-wide: #{$container-max-width-wide};
+  --ng-container-gutter: #{$container-gutter};
+  --ng-control-min-height: #{$control-min-height};
+  --ng-weight-strong: #{$font-weight-strong};
+  --ng-radius-card: #{$radius-card};
+  --ng-radius-card-sm: #{$radius-card-sm};
+  --ng-radius-card-md: #{$radius-card-md};
+  --ng-radius-card-feature: #{$radius-card-feature};
+  --ng-radius-card-lg: #{$radius-card-lg};
+  --ng-radius-pill: #{$radius-pill};
+  --ng-card-border: #{$card-border-color};
+  --ng-card-shadow: #{$card-shadow};
+  --ng-card-shadow-hover: #{$card-shadow-hover};
+  --ng-focus-ring: #{$focus-ring-color};
+  --ng-transition-control: #{$transition-control};
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -15,6 +56,16 @@ body {
   background-color: $background-color;
   font-size: $font-size-body-mobile;
   line-height: $line-height-body;
+}
+
+::selection {
+  background-color: $accent-sage;
+  color: $secondary-color;
+}
+
+:focus-visible {
+  outline: 3px solid $focus-ring-color;
+  outline-offset: 3px;
 }
 
 @media (min-width: 1200px) {

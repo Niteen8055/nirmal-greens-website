@@ -1,0 +1,252 @@
+@use "../../abstracts/variables" as *;
+
+.growing-space {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: $section-space-growing 0;
+    background: $surface-color;
+}
+
+.growing-space__backdrop {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.82)),
+        url("/img/home/growing-space/growing-space-bg.webp") center / cover no-repeat;
+    pointer-events: none;
+}
+
+.growing-space__container {
+    max-width: $container-max-width;
+    padding-inline: $container-gutter;
+}
+
+.growing-space__layout {
+    display: grid;
+    grid-template-columns: minmax(24rem, 0.92fr) minmax(32rem, 1.08fr);
+    align-items: center;
+    gap: clamp(2rem, 4vw, 4.5rem);
+}
+
+.growing-space__main-media {
+    min-height: clamp(28rem, 39vw, 38rem);
+    overflow: hidden;
+    border-radius: clamp(1.5rem, 2vw, 2.25rem);
+    box-shadow: 0 0.9rem 2.4rem rgba(37, 51, 0, 0.1);
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: inherit;
+        object-fit: cover;
+    }
+}
+
+.growing-space__content {
+    min-width: 0;
+}
+
+.growing-space__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin: 0 0 1.15rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: $radius-pill;
+    background: linear-gradient(90deg, #edf7d7, #f5f9eb);
+    color: #1f4d20;
+    font-size: $font-size-eyebrow-growing;
+    font-weight: $font-weight-extrabold;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.growing-space__eyebrow-icon {
+    display: grid;
+    width: 1.75rem;
+    height: 1.75rem;
+    place-items: center;
+    border-radius: 50%;
+    background: #74b83b;
+    color: #fff;
+
+    svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+
+.growing-space__title {
+    max-width: 44rem;
+    margin: 0;
+    color: #123f22;
+    font-family: $heading-font-family;
+    font-size: clamp(3rem, 4.6vw, 5.15rem);
+    font-weight: 700;
+    line-height: 0.98;
+}
+
+.growing-space__lede {
+    max-width: 42rem;
+    margin: 1.35rem 0 0;
+    color: #3c4438;
+    font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+    line-height: 1.55;
+    text-wrap: pretty;
+}
+
+.growing-space__cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(0.75rem, 1.25vw, 1.25rem);
+    margin-top: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+
+.growing-space__card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(41, 117, 54, 0.08);
+    border-radius: $radius-card-feature;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 0.45rem 1.2rem rgba(37, 51, 0, 0.08);
+
+    &:nth-child(2) {
+        --reveal-delay: 80ms;
+    }
+
+    &:nth-child(3) {
+        --reveal-delay: 160ms;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1.5 / 1;
+        object-fit: cover;
+    }
+
+    h3 {
+        margin: 0;
+        padding: 0.85rem 0.55rem 1rem;
+        color: #1d4d20;
+        font-family: $heading-font-family;
+        font-size: clamp(1rem, 1.25vw, 1.25rem);
+        font-weight: $font-weight-extrabold;
+        line-height: 1.25;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .growing-space__layout {
+        grid-template-columns: minmax(20rem, 0.85fr) minmax(28rem, 1.15fr);
+        gap: 2rem;
+    }
+
+    .growing-space__main-media {
+        min-height: 26rem;
+    }
+
+    .growing-space__title {
+        font-size: clamp(2.5rem, 5vw, 3.8rem);
+    }
+
+    .growing-space__lede {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .growing-space__layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.75rem;
+    }
+
+    .growing-space__main-media {
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+    }
+
+    .growing-space__main-media img {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .growing-space {
+        padding: 3rem 0;
+    }
+
+    .growing-space__container {
+        padding-inline: 1.25rem;
+    }
+
+    .growing-space__layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .growing-space__main-media {
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+    }
+
+    .growing-space__eyebrow {
+        margin-bottom: 0.9rem;
+        padding: 0.45rem 0.75rem;
+        font-size: 0.7rem;
+    }
+
+    .growing-space__eyebrow-icon {
+        width: 1.45rem;
+        height: 1.45rem;
+    }
+
+    .growing-space__title {
+        font-size: clamp(2.15rem, 9vw, 3rem);
+        line-height: 1.02;
+    }
+
+    .growing-space__lede {
+        margin-top: 0.9rem;
+        font-size: 1rem;
+    }
+
+    .growing-space__cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.55rem;
+        margin-top: 1.25rem;
+    }
+
+    .growing-space__card {
+        border-radius: 0.8rem;
+
+        h3 {
+            padding: 0.65rem 0.25rem 0.75rem;
+            font-size: clamp(0.78rem, 3vw, 0.95rem);
+        }
+    }
+}
+
+.has-scroll-reveal .growing-space [data-reveal] {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 480ms ease var(--reveal-delay, 0ms), transform 480ms ease var(--reveal-delay, 0ms);
+}
+
+.has-scroll-reveal .growing-space [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .has-scroll-reveal .growing-space [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
